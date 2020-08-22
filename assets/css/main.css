@@ -125,7 +125,7 @@ p {
 
 header.special {
   text-align: center;
-  margin-bottom: 4rem; }
+  margin-bottom: 2rem; }
   header.special p {
     max-width: 75%;
     margin-left: auto;
@@ -1059,7 +1059,7 @@ ul.actions {
 .row > .off-5 {
   margin-left: 41.6666666667%; }
 .row > .col-6 {
-  width: 50%; }
+  width: 100%; }
 .row > .off-6 {
   margin-left: 50%; }
 .row > .col-7 {
@@ -1121,7 +1121,7 @@ ul.actions {
   .row.gtr-uniform {
     margin-top: -3rem; }
     .row.gtr-uniform > * {
-      padding-top: 3rem; }
+      padding-top: 2rem; }
 .row.gtr-150 {
   margin-top: 0;
   margin-left: -4.5rem; }
@@ -1236,7 +1236,7 @@ ul.actions {
     .row.gtr-uniform {
       margin-top: -3rem; }
       .row.gtr-uniform > * {
-        padding-top: 3rem; }
+        padding-top: 2rem; }
   .row.gtr-150 {
     margin-top: 0;
     margin-left: -4.5rem; }
@@ -1776,7 +1776,7 @@ ul.icons {
 
 /* Wrapper */
 .wrapper {
-  padding: 4rem 0 6rem 0 ;
+  padding: 2rem 0 4rem 0 ;
   position: relative;
   z-index: 1; }
   @media screen and (max-width: 1280px) {
@@ -2055,14 +2055,15 @@ ul.icons {
 #cta {
   background-color: #45526e;
   color: rgba(255, 255, 255, 0.75);
-  background-attachment: fixed;
-  background-image: linear-gradient(rgba(0,0,0, 0.25),#45526e), url(../../images/banner.jpg);
-  background-position: bottom;
+  background-attachment: scroll;
+  background-image: linear-gradient(rgba(0,0,0, 0.25),#45526e), url(../../images/posto.fazenda.2.jpg);
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vw;
   position: relative;
   text-align: center;
-  z-index: 1; }
+  z-index: 1;
+  min-height: 25rem;}
   #cta input, #cta select, #cta textarea {
     color: #ffffff; }
   #cta a {
@@ -2195,15 +2196,16 @@ ul.icons {
   #cta .inner {
     position: relative;
     z-index: 3; }
-  @media screen and (max-width: 980px) {
+  @media screen and (max-width: 1000px) {
     #cta {
-      background-attachment: scroll; } }
+      background-attachment: scroll;
+      min-height: 11rem; } }
 
 /* Footer */
 #footer {
   background-color: #111111;
   color: rgba(255, 255, 255, 0.5);
-  padding: 8rem 0 6rem 0 ; }
+  padding: 3rem 0 3rem 0 ; }
   #footer input, #footer select, #footer textarea {
     color: #ffffff; }
   #footer a {
@@ -2335,7 +2337,7 @@ ul.icons {
     #footer .testimonials .content .credit strong {
       color: #45526e; }
   #footer a {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 1);
     text-decoration: none; }
     #footer a:hover {
       color: #45526e; }
@@ -2355,11 +2357,11 @@ ul.icons {
     border-top: 1px solid;
     font-size: 0.8rem;
     opacity: 0.5;
-    padding: 2rem 0;
+    padding: 1.5rem 0 1rem 0;
     text-align: center; }
   @media screen and (max-width: 1280px) {
     #footer {
-      padding: 4rem 0 2rem 0 ; } }
+      padding: 2rem 0 2rem 0 ; } }
   @media screen and (max-width: 980px) {
     #footer .content {
       -moz-flex-wrap: wrap;
@@ -2430,12 +2432,14 @@ body {
     height: inherit;
     line-height: inherit;
     padding: 0 1.25rem;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 1.3rem; }
   #header > nav > a {
     color: inherit;
     display: inline-block;
     padding: 0 0.75rem;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 1.3rem; }
     #header > nav > a:hover {
       color: #ffffff; }
     #header > nav > a[href="#menu"] {
@@ -2458,8 +2462,11 @@ body {
     #header > nav > a:last-child {
       padding-right: 1.25rem; }
     @media screen and (max-width: 736px) {
+      #header > .logo {
+        font-size: 1rem;}
       #header > nav > a {
-        padding: 0 0.5rem; }
+        padding: 0 0.5rem;
+        font-size: 1rem; }
         #header > nav > a + a[href="#menu"]:last-child {
           margin-left: 0.25rem;
           padding-left: 1rem; }
@@ -2661,7 +2668,7 @@ body {
   border-radius: 4px;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.025);
   margin-bottom: 2rem;
-  padding: 3rem; }
+  padding: 2rem; }
   @media screen and (max-width: 980px) {
     #main .content {
       padding: 2rem; } }
@@ -2821,11 +2828,53 @@ body.is-menu-visible #menu {
 
 /* New container for Logo */
 .image-container {
-  margin: 10px 15%; /* 30% margin right + 40% picture + 30% marging left */
+  margin: 10px 20%; 
 }
+@media screen and (max-width: 736px) {
+  .image-container {
+    margin: 5px 15%; 
+  } }
+
 /* Image itself : a child of the image container*/
 .image-container img {
   width: 100%;/* This adjusts each pict to be 100% of the containter width. */
   margin-top: 10px;
   opacity: 1;
+}
+
+/* Bold h2 only inside class content */
+.content h2{
+    /* font-weight: bold; */
+}
+
+header.special h2{
+  text-transform: uppercase;
+}
+
+ul.contato{
+  font-size: 1.3rem;
+  line-height: 2.6rem;
+}
+
+@media screen and (max-width: 736px) {
+  ul.contato{
+    font-size: 1.0rem;
+  }
+}
+
+.link-contatos{
+  text-decoration: none;
+  color: #444444;
+}
+
+@media screen and (max-width: 1000px) {
+  .link-contatos{
+    text-decoration: underline;
+    color: #444444;
+  }
+}
+
+.link-contatos:hover{
+  text-decoration: underline;
+  color: #45526e;
 }
